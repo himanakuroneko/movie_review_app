@@ -15,11 +15,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('events', 'EventsController@index');
 //Route::get('/', function () {
 //    return view('welcome');
 //});
 
-Route::view('/','welcome');
+Route::get('/','WelcomeController@index');
+Route::get('events/{id}','EventsController@show')->name('events.show');
+//Route::get('events/category/{category}/{subcategory}','EventsController@category');
 
 Route::get('about', function(){
     $languages=[
