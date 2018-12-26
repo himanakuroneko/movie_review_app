@@ -1,12 +1,9 @@
+<h1>Events</h1>
 
 <ul>
-    @foreach ($events as $event)
-        <li>{{ $event }}</li>
-    @endforeach
+    @forelse ($events as $event)
+        <li>{{ $event->name }}</li>
+    @empty
+        <li>No events found!</li>
+    @endforelse
 </ul>
-
-<table>
-    @foreach ($events as $event)
-        @include('partials._row', ['event' => $event])
-    @endforeach
-</table>

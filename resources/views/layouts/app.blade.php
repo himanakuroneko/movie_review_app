@@ -16,7 +16,7 @@
                 </p>
             @show
             
-            {{-- show equivalent of @endsection @yield('advertisement') --}}
+            {{-- @show equivalent of @endsection @yield('advertisement') --}}
             
 
         </div>
